@@ -1,4 +1,4 @@
-# NodeJS Sample
+# BiblioTECH Backend APIs
 #### ExpressJS, Typescript, TypeORM, MySQL
 
 ## 1. Running project
