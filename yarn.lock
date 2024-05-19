@@ -630,6 +630,13 @@
   dependencies:
     "@types/node" "*"
 
+"@types/cookie-parser@^1.4.7":
+  version "1.4.7"
+  resolved "https://registry.npmjs.org/@types/cookie-parser/-/cookie-parser-1.4.7.tgz"
+  integrity sha512-Fvuyi354Z+uayxzIGCwYTayFKocfV7TuDYZClCdIP9ckhvAu/ixDtCB6qx2TT0FKjPLf1f3P/J1rgf6lPs64mw==
+  dependencies:
+    "@types/express" "*"
+
 "@types/cookiejar@*":
   version "2.1.2"
   resolved "https://registry.npmjs.org/@types/cookiejar/-/cookiejar-2.1.2.tgz"
@@ -658,17 +665,7 @@
     "@types/qs" "*"
     "@types/range-parser" "*"
 
-"@types/express@*":
-  version "4.17.11"
-  resolved "https://registry.npmjs.org/@types/express/-/express-4.17.11.tgz"
-  integrity sha512-no+R6rW60JEc59977wIxreQVsIEOAYwgCqldrA/vkpCnbD7MqTefO97lmoBe4WE0F156bC4uLSP1XHDOySnChg==
-  dependencies:
-    "@types/body-parser" "*"
-    "@types/express-serve-static-core" "^4.17.18"
-    "@types/qs" "*"
-    "@types/serve-static" "*"
-
-"@types/express@^4.17.9":
+"@types/express@*", "@types/express@^4.17.9":
   version "4.17.9"
   resolved "https://registry.npmjs.org/@types/express/-/express-4.17.9.tgz"
   integrity sha512-SDzEIZInC4sivGIFY4Sz1GG6J9UObPwCInYJjko2jzOf/Imx/dlpume6Xxwj1ORL82tBbmN4cPDIDkLbWHk9hw==
@@ -716,6 +713,13 @@
   version "14.3.4"
   resolved "https://registry.npmjs.org/@types/joi/-/joi-14.3.4.tgz"
   integrity sha512-1TQNDJvIKlgYXGNIABfgFp9y0FziDpuGrd799Q5RcnsDu+krD+eeW/0Fs5PHARvWWFelOhIG2OPCo6KbadBM4A==
+
+"@types/jsonwebtoken@^9.0.6":
+  version "9.0.6"
+  resolved "https://registry.npmjs.org/@types/jsonwebtoken/-/jsonwebtoken-9.0.6.tgz"
+  integrity sha512-/5hndP5dCjloafCXns6SZyESp3Ldq7YjH3zwzwczYnjxIT0Fqzk5ROSYVGfFyczIue7IUEj8hkvLbPoLQ18vQw==
+  dependencies:
+    "@types/node" "*"
 
 "@types/mailgun-js@^0.22.11":
   version "0.22.11"
@@ -1690,6 +1694,14 @@ convert-source-map@^1.4.0, convert-source-map@^1.6.0, convert-source-map@^1.7.0:
   dependencies:
     safe-buffer "~5.1.1"
 
+cookie-parser@^1.4.6:
+  version "1.4.6"
+  resolved "https://registry.npmjs.org/cookie-parser/-/cookie-parser-1.4.6.tgz"
+  integrity sha512-z3IzaNjdwUC2olLIB5/ITd0/setiaFMLYiZJle7xg5Fe9KWAceil7xszYfHHBtDFYLSgJduS2Ty0P1uJdPDJeA==
+  dependencies:
+    cookie "0.4.1"
+    cookie-signature "1.0.6"
+
 cookie-signature@1.0.6:
   version "1.0.6"
   resolved "https://registry.npmjs.org/cookie-signature/-/cookie-signature-1.0.6.tgz"
@@ -1699,6 +1711,11 @@ cookie@0.4.0:
   version "0.4.0"
   resolved "https://registry.npmjs.org/cookie/-/cookie-0.4.0.tgz"
   integrity sha512-+Hp8fLp57wnUSt0tY0tHEXh4voZRDnoIrZPqlo3DPiI4y9lwg/jqx+1Om94/W6ZaPDOUbnjOt/99w66zk+l1Xg==
+
+cookie@0.4.1:
+  version "0.4.1"
+  resolved "https://registry.npmjs.org/cookie/-/cookie-0.4.1.tgz"
+  integrity sha512-ZwrFkGJxUR3EIoXtO+yVE69Eb7KlixbaeAWfBQB9vVsNn/o+Yw69gBWSSDK825hQNdN+wF8zELf3dFNl/kxkUA==
 
 cookiejar@^2.1.2:
   version "2.1.2"

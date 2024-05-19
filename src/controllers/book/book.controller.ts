@@ -5,6 +5,7 @@ import IController from '../../interfaces/IController';
 import {
   ICreateBook,
   IListBook,
+  IListBookByCollection,
   IUpdateBook,
   IDeleteBook
 } from '../../interfaces/book.interface';
@@ -48,9 +49,21 @@ const create: IController = async (req, res) => {
 const list: IController = async (req, res) => {
   try {
     const params: IListBook = {
-      userId: req.body.userId,
+      userId: Number(req.query.userId),
     }
     const list = await bookService.list(params);
+    return ApiResponse.result(res, list, httpStatusCodes.OK);
+  } catch (e) {
+    ApiResponse.exception(res, e);
+  }
+};
+
+const listByCollection: IController = async (req, res) => {
+  try {
+    const params: IListBookByCollection = {
+      collectionId: req.body.collectionId,
+    }
+    const list = await bookService.listByCollection(params);
     return ApiResponse.result(res, list, httpStatusCodes.OK);
   } catch (e) {
     ApiResponse.exception(res, e);
@@ -97,5 +110,6 @@ export default {
   create,
   list,
   update,
-  remove
+  remove,
+  listByCollection
 };

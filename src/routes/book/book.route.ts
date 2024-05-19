@@ -36,4 +36,10 @@ router.get(
   bookController.list,
 );
 
+router.get(
+  '/byCollection',
+  //schemaValidator(userSchema.login),
+  bookController.listByCollection,
+);
+
 export default router;

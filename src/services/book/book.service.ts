@@ -15,6 +15,7 @@ import {
   ICreateBook,
   IDeleteBook,
   IListBook,
+  IListBookByCollection,
   IUpdateBook
   // IDeleteBook,
   // IListBook
@@ -47,14 +48,30 @@ const list = async (params: IListBook) => {
   collectionRepo.where('collection.userId = :userId', { userId: params.userId });
 
   const collections = await collectionRepo.getMany();
-
  
   const collectionIds = collections.map(x => x.id);
+ 
+  if (collectionIds.length > 0) {
+    const books = await getRepository(Book)
+    .createQueryBuilder('book')
+    .innerJoin('book.collection', 'collection')
+    .where('collection.id IN (:...collectionIds)', { collectionIds })
+    .getMany();
+    
+    return books;
+    }
+  else {
+    return [];
+  }
+};
+
+const listByCollection = async (params: IListBookByCollection) => {
+  const collectionId = params.collectionId
 
   const books = await getRepository(Book)
   .createQueryBuilder('book')
   .innerJoin('book.collection', 'collection')
-  .where('collection.id IN (:...collectionIds)', { collectionIds })
+  .where('collection.id = :collectionId', { collectionId })
   .getMany();
 
   return books;
@@ -100,5 +117,6 @@ export default {
   create,
   update,
   list,
-  remove
+  remove,
+  listByCollection
 }

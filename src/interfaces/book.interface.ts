@@ -39,6 +39,10 @@ export interface IListBook {
   userId: number;
 }
 
+export interface IListBookByCollection {  
+  collectionId: number;
+}
+
 export interface IDetailBook {
   id: number;
 }

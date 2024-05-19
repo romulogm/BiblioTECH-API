@@ -19,8 +19,8 @@ export default class ApiResponse {
     if (cookie) {
       res.cookie(cookie.key, cookie.value);
     }
-
-    let responseData: any = { data, success: true };
+    
+    let responseData: any = { data, success: true, cookie};
 
     if (pagination) {
       responseData = { ...responseData, pagination };
